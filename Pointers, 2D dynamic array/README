@@ -1,0 +1,21 @@
+makefile is to compile and run the code and will have recap.cpp as the main file, containing all the code. 
+
+Program:
+At the start of your program, your code will open and read values in from a file data.txt.
+The file will have an unknown number of lines. You are required to read this data, line
+by line, into a 2D dynamic array of strings.
+
+The format of the line is as follows:
+1,a,b,c,d
+
+Each line starts with an ID, which is an int, and then will be followed by an unknown
+number of strings separated by commas. Each string in the line is associated with the ID
+of the line.
+Your 2D dynamic array should be sized to exactly the size of the number of items in each
+line. Each line will have at least the ID and 1 item.
+Once the items are stored in the array you need to print out the array in ascending order
+based on the order IDs in the following format:
+ID,a,b,c
+An example of this output is as follows (for 2 orders):
+3,toaster,iron
+4,spanner,wrench,hammer
