@@ -1,0 +1,60 @@
+Factory class:
+
+The methods defined for the class are as follows:
+• factory(fID:string, oID:string, droneLimit:int): A constructor for the factory class.
+It sets the factory ID, owner ID and the droneLimit variable. The list variable
+should be initialised but not populated by any objects yet.
+• factory(fID:string, oID:string, drones: drone**, droneLimit:int,currSize:int): A second constructor for the factory class. It sets the factory ID and owner ID . It also
+receives an array of drone objects and the necessary variables to instantiate the current object’s list. The objects in the drones argument should be used to instantiate
+the list variable in the class, creating a copy.
+• ∼factory(): The class destructor. It deletes all of the memory created by the class.
+The list should be deleted from index 0 to the last index.
+3
+• addDrone(d:drone*): This function receives a drone object as an argument. This
+adds the argument into the list variable, adding it at the first available index. It
+returns the index at where the new creature was inserted. If the team is full, return
+-1. When added into the list, the drone’s HP and energy should be multiplied by
+the current level of the factory.
+• removeDrone(name:string): This removes a drone associated with the passed in
+argument. If there are multiple examples of the name, the first one found from
+index 0, should be removed. The memory associated with it should also be deleted.
+If the drone could not be found, return -1.
+• getFID(): Returns the ID of the factory.
+• getOID(): Returns the ID of the owner.
+• getCurrSize(): Returns the current number of drones in the list variable.
+• getLimit(): Returns the limit of the number of drones.
+• levelUp(): This increases the level of the factory by 1.
+• printDrones(s:string): Prints out the following information (with example values):
+Factory ID: 001
+OID: 001
+Number of Drones: 3
+Drone Limit: 10
+Rank: ***
+Energy Level: 1000
+Mega Tank Drone
+Heli-Drone
+Jet Drone
+After the rank is displayed, all of the drones should be displayed in the order indicated by the argument, s, passed in:
+– hp: Sort the list by hp ascending
+– m: Sort the list by energy descending
+The energy level output is the total energy value of every created drone in the list.
+
+Drone class:
+
+• drone(name: string,type: string,hp: int,energy:double): The constructor for the
+drone class. It instantiates the variables of the class with the given arguments.
+• ∼drone(): The destructor for the class. When called, it should print out a message
+with the following format (with a new line at the end):
+X deleted
+where X represents the name of the drone being deleted.
+• getName():A getter for the name variable.
+• getType():A getter for the type variable.
+• getHP(): A getter for the HP variable.
+• getEnergy(): A getter for the energy variable.
+• print(): This function prints out the details of the drone in the following format
+(with example values):
+Name: Mega Tank Drone
+Type: Tank
+HP: 300
+Energy: 1000
+Each line of output should have a new line at the end.
