@@ -1,0 +1,60 @@
+________________________________________CAULDRON______________________________________________________________________
+_______________________________________________________________________________________________________________________________________________
+• cauldron(ingredientList:string, maxIngredients:int): The basic constructor for the
+class. It receives a string, which is a name (including the file extension) for a file that
+will contain the input values. The maximum number of ingredients in the cauldron
+is specified as well. The file will consist of an unknown number of lines. On each
+line, there will be an ingredient in the following format (for example):
+giant toe,0
+The first component of the string is the ingredient name followed by an integer value
+representing the danger rating of the ingredient. This is comma delimited. If there
+are more ingredients in the file than the maximum allows, only store in the first X,
+where X refers to the maximum. For example, if there’s a limit of 10, and the list
+has 30, only store the first 10 ingredients.
+• cauldron(oldCauldron:const cauldron *): A copy constructor for the class. It will
+copy the variables of the argument into the newly created instance.
+• ∼cauldron: The destructor for the class. It deallocates all of the memory assigned
+by the class. The ingredients array should be deallocated from index 0.
+• operator=(oldCauldron:const cauldron&): Than overload of the assignment operator. When used in the format A = B, the variables of B must be assigned to A
+after the line executes.
+• print(): This prints out a summary of information with the following format (with
+example values):
+Number of Ingredients: 10
+Average Danger Rating: 2.42
+Maximum Danger Rating: 5
+Minimum Danger Rating: 0
+3
+• getMax(): Getter for the maxIngredient variable. It is a constant function.
+• getCurr(): Getter for the numIngredient variable. It is a constant function.
+• getIngredient(a:int): Gets and returns the ingredient pointer at the index a. It is a
+constant function.
+• addIngredient(in:string,dR:int): This adds the given arguments as a new ingredient
+to the ingredients array. The new ingredient should be added to the first open space
+in the array. This function returns the index where the new ingredient is added. If
+there is no space in the current array, the array should be extended by 1 and then
+the new element should be added at the end. The maximum size of the array should
+increase as well.
+• removeIngredient(in:int): This function deletes the ingredient associated with the
+given index. If the index is out of bounds, it should do nothing. The number of
+ingredients should change as well.
+• distillPotion(currCauldron: cauldron&, list: string *,numRemove:int): This function receives a reference to a cauldron object and a list of ingredient names (with
+the number to remove as well). Each ingredient in the ingredients argument should
+be deleted from the ingredients list of currCauldron if found. If there are duplicates,
+the first one should always be deleted.
+• listIngredients(): This function prints out the current ingredients in the cauldron,
+from index 0. Each name is printed out on one line with a new line at the end. An
+example is given below:
+blueberry
+blackberry
+strawberry
+cherry
+_______________________________________________________________________________________________________________________________________________
+______________________________________INGREDIENT__________________________________________________________
+_______________________________________________________________________________________________________________________________________________
+• ingredient(name:string,dangerRating:int): The value constructor of the class. It
+constructs the class using the passed in variables.
+• ingredient(newIngredient:const ingredient *): A copy constructor for the class. Create the new instance of the class using the passed in argument.
+• ingredient(newIngredient:const ingredient &): A copy constructor for the class. Create the new instance of the class using the passed in argument.
+• ∼ingredient: The default destructor for the class.
+• getDanger(): getter for the dangerRating variable.
+• getName(): getter for the name variable
